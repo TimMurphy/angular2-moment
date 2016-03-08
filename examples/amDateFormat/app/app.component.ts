@@ -1,6 +1,17 @@
 import {Component} from 'angular2/core';
+import {DateFormatPipe} from 'angular2-moment';
+
 @Component({
-    selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    selector: 'app',
+    pipes: [DateFormatPipe],
+    template: `
+      Last updated: <b>{{myDate | amDateFormat:'LL'}}</b>
+    `
 })
-export class AppComponent { }
+export class AppComponent {
+    myDate: Date;
+
+    constructor() {
+        this.myDate = new Date();
+    }
+}
