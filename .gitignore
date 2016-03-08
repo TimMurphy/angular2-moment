@@ -19,3 +19,6 @@ index.d.ts
 *.spec.js
 *.spec.js.map
 *.spec.d.ts
+
+examples/amDateFormat/**/*.js
+examples/amDateFormat/**/*.js.map
